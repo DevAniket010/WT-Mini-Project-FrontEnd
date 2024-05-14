@@ -1,28 +1,25 @@
 "use client";
 import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import PrimaryBtn from "../Helpers/PrimaryBtn";
 import Image from "next/image";
-import { AvatarReg } from "../Constants/imageContants";
 import { BiSolidCamera } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { setCookie } from "cookies-next";
 import axios from "axios";
-import { ApiUrl, registerApi } from "../Constants/apiEndpoints";
 import { useRouter } from "next/navigation";
-import { postRequest } from "@/config/axiosInterceptor";
-import Title from "../Helpers/Title";
-import Description from "../Helpers/Description";
-import { userDetailsStore } from "@/store/userStore";
-import { useLoader } from "@/store/loaderStore";
+import PrimaryBtn from "../Button";
+import AvatarBg from "../../public/assets/images/profile.png";
+
+// import { userDetailsStore } from "@/store/userStore";
+// import { useLoader } from "@/store/loaderStore";
 
 const RegisterComponent = () => {
   const [type, setType] = useState(false);
   const [image, setImage] = useState(null);
-  const getUserDetails = userDetailsStore((state) => state.getUserDetails);
-  const setLoading = useLoader((state) => state.setLoading);
+  //   const getUserDetails = userDetailsStore((state) => state.getUserDetails);
+  //   const setLoading = useLoader((state) => state.setLoading);
 
   const {
     register,
@@ -38,7 +35,7 @@ const RegisterComponent = () => {
   const submitData = async (data) => {
     try {
       setLoading(true);
-      const response = await postRequest({
+      const response = await axios.post({
         url: registerApi,
         body: data,
       });
@@ -92,23 +89,28 @@ const RegisterComponent = () => {
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
-      className="lg:w-[70%] w-full lg:mx-0 mx-2 lg:px-10 px-4 py-8 pb-12 bg-white rounded-md shadow-md"
+      className="lg:w-[60%] w-full lg:mx-0 mx-2 lg:px-10 px-4 py-8 pb-12 bg-white rounded-xl shadow-xl"
     >
-      <Title>
-        Welcome to <span className="text-blue-500">StudyNex</span> !
-      </Title>
-      <Description>
-        Already a member?{" "}
-        <a className="text-[#4983f6]" href="/login">
-          Log in now
-        </a>
-      </Description>
+      <div className="flex justify-center flex-col items-center">
+        <p className="text-2xl font-semibold">
+          Welcome to <span className="text-blue-500">StudyNex</span> !
+        </p>
+        <p>
+          Already a member?{" "}
+          <a className="text-[#f69749] font-semibold" href="/login">
+            Log in now
+          </a>
+        </p>
+      </div>
       <form
         action=""
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-6 justify-center items-center"
         onSubmit={handleSubmit(submitData)}
       >
-        <label className="m-auto relative flex justify-center" htmlFor="image">
+        <label
+          className="m-auto relative flex justify-center mt-4"
+          htmlFor="image"
+        >
           {image ? (
             <img
               src={image}
@@ -117,7 +119,7 @@ const RegisterComponent = () => {
             />
           ) : (
             <Image
-              src={AvatarReg}
+              src={AvatarBg}
               alt=""
               className="w-24 h-24 cursor-pointer rounded-full"
             ></Image>
@@ -131,7 +133,7 @@ const RegisterComponent = () => {
             onChange={(e) => uploadImage(e.target.files[0])}
           />
         </label>
-        <div className="input-group w-full">
+        <div className="input-group w-3/4">
           <input
             id="name"
             type="text"
@@ -149,7 +151,7 @@ const RegisterComponent = () => {
             <span className="text-red-600 text-xs">Max length exceeded</span>
           )}
         </div>
-        <div className="input-group w-full">
+        <div className="input-group w-3/4">
           <input
             id="mobile_number"
             type="tel"
@@ -178,7 +180,7 @@ const RegisterComponent = () => {
               </span>
             ))}
         </div>
-        <div className="input-group w-full">
+        <div className="input-group w-3/4">
           <input
             id="email"
             type="text"
@@ -202,7 +204,7 @@ const RegisterComponent = () => {
             <span className="text-red-600 text-xs">{errors.email.message}</span>
           )}
         </div>
-        <div className="input-group w-full">
+        <div className="input-group w-3/4">
           <input
             id="username"
             type="text"
@@ -219,7 +221,7 @@ const RegisterComponent = () => {
             <span className="text-red-600 text-xs">Username is required</span>
           )}
         </div>
-        <div className="input-group w-full">
+        <div className="input-group w-3/4">
           <input
             id="password"
             type={type ? "text" : "password"}

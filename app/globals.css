@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 .btn-grad {
-  background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+  background-image: linear-gradient(
+    to right,
+    #ff8008 0%,
+    #ffc837 51%,
+    #ff8008 100%
+  );
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   border-radius: 10px;
   display: block;
 }
@@ -22,14 +29,19 @@
 }
 
 .btn2-grad {
-  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
+  background-image: linear-gradient(
+    to right,
+    #00d2ff 0%,
+    #3a7bd5 51%,
+    #00d2ff 100%
+  );
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   border-radius: 10px;
   display: block;
 }
@@ -38,4 +50,53 @@
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border-bottom: 1px solid #c0c0c0;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.placeholder {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #808080;
+  font-size: 18px;
+  padding: 0px 5px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus ~ .placeholder,
+.input:valid ~ .placeholder {
+  top: -12px;
+  left: 0px;
+  font-size: 12px;
+  color: gray;
+  /* background: #fff; */
+}
+
+.gradient-transition {
+  background-image: linear-gradient(to right, #ff7b00, #ffa83e, #f7592d);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #4983f6, #a578f7);
+}
+
+.gradient-transition:hover {
+  background-position: 100% 0;
 }
