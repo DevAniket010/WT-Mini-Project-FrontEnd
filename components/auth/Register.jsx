@@ -11,21 +11,21 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import PrimaryBtn from "../Button";
 import AvatarBg from "../../public/assets/images/profile.png";
+import { userDetailsStore } from "@/store/userStore";
 
 // import { userDetailsStore } from "@/store/userStore";
 // import { useLoader } from "@/store/loaderStore";
 
 const RegisterComponent = () => {
   const [type, setType] = useState(false);
-  const [image, setImage] = useState(null);
-  //   const getUserDetails = userDetailsStore((state) => state.getUserDetails);
+  const [imageUrl, setImageUrl] = useState(null);
+  const getUserDetails = userDetailsStore((state) => state.getUserDetails);
   //   const setLoading = useLoader((state) => state.setLoading);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    getValues,
     setValue,
     reset,
   } = useForm();
@@ -34,25 +34,25 @@ const RegisterComponent = () => {
 
   const submitData = async (data) => {
     try {
-      setLoading(true);
-      const response = await axios.post({
-        url: registerApi,
-        body: data,
-      });
+      // setLoading(true);
+      const response = await axios.post(
+        "http://localhost:3002/api/signup",
+        data
+      );
       if (response?.data?.status) {
         setCookie("token", response?.data?.data?.token);
         reset();
         toast.success("Registration Successful!");
-        router.push("/create-join");
+        router.push("/feed");
         getUserDetails();
-        setLoading(false);
+        // setLoading(false);
       } else {
         toast.error(response?.data?.message);
-        setLoading(false);
+        // setLoading(false);
       }
     } catch (error) {
       console.log(error);
-      setLoading(false);
+      // setLoading(false);
     }
   };
 
@@ -66,7 +66,7 @@ const RegisterComponent = () => {
       file.type == "image/jpg" ||
       file.type == "image/jpeg"
     ) {
-      setImage(URL.createObjectURL(file));
+      setImageUrl(URL.createObjectURL(file));
       const data = new FormData();
       data.append("file", file);
       data.append("upload_preset", "study-nex");
@@ -77,8 +77,7 @@ const RegisterComponent = () => {
       })
         .then((res) => res.json())
         .then((res) => {
-          // console.log(res.url);
-          setValue("image", res?.secure_url?.toString());
+          setValue("imageUrl", res?.secure_url?.toString());
         });
     } else {
       toast.error("Invalid Image!");
@@ -111,9 +110,9 @@ const RegisterComponent = () => {
           className="m-auto relative flex justify-center mt-4"
           htmlFor="image"
         >
-          {image ? (
+          {imageUrl ? (
             <img
-              src={image}
+              src={imageUrl}
               alt=""
               className="w-24 h-24 cursor-pointer rounded-full object-cover bg-center"
             />
@@ -133,53 +132,6 @@ const RegisterComponent = () => {
             onChange={(e) => uploadImage(e.target.files[0])}
           />
         </label>
-        <div className="input-group w-3/4">
-          <input
-            id="name"
-            type="text"
-            required
-            className="input"
-            {...register("name", { required: true, maxLength: 30 })}
-          />
-          <label htmlFor="name" className="placeholder">
-            Name
-          </label>
-          {errors.name && errors.name.type === "required" && (
-            <span className="text-red-600 text-xs">Name is required</span>
-          )}
-          {errors.name && errors.name.type === "maxLength" && (
-            <span className="text-red-600 text-xs">Max length exceeded</span>
-          )}
-        </div>
-        <div className="input-group w-3/4">
-          <input
-            id="mobile_number"
-            type="tel"
-            required
-            maxLength={10}
-            className="input"
-            {...register("mobile_number", {
-              required: true,
-              maxLength: 10,
-              minLength: 10,
-            })}
-          />
-          <label htmlFor="mobile_number" className="placeholder">
-            Mobile number
-          </label>
-          {errors.mobile_number && errors.mobile_number.type === "required" && (
-            <span className="text-red-600 text-xs">
-              Mobile number is required
-            </span>
-          )}
-          {(errors.mobile_number &&
-            errors.mobile_number?.type === "maxLength") ||
-            (errors.mobile_number?.type === "minLength" && (
-              <span className="text-red-600 text-xs">
-                Mobile number must be of 10 digits long
-              </span>
-            ))}
-        </div>
         <div className="input-group w-3/4">
           <input
             id="email"
@@ -204,6 +156,36 @@ const RegisterComponent = () => {
             <span className="text-red-600 text-xs">{errors.email.message}</span>
           )}
         </div>
+        <div className="input-group w-3/4">
+          <input
+            id="mobileNo"
+            type="tel"
+            required
+            maxLength={10}
+            className="input"
+            {...register("mobileNo", {
+              required: true,
+              maxLength: 10,
+              minLength: 10,
+            })}
+          />
+          <label htmlFor="mobileNo" className="placeholder">
+            Mobile number
+          </label>
+          {errors.mobile_number && errors.mobile_number.type === "required" && (
+            <span className="text-red-600 text-xs">
+              Mobile number is required
+            </span>
+          )}
+          {(errors.mobile_number &&
+            errors.mobile_number?.type === "maxLength") ||
+            (errors.mobile_number?.type === "minLength" && (
+              <span className="text-red-600 text-xs">
+                Mobile number must be of 10 digits long
+              </span>
+            ))}
+        </div>
+
         <div className="input-group w-3/4">
           <input
             id="username"

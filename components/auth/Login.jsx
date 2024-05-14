@@ -9,14 +9,14 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { setCookie } from "cookies-next";
 import PrimaryBtn from "../Button";
-// import { userDetailsStore } from "@/store/userStore";
+import { userDetailsStore } from "@/store/userStore";
 // import Loader from "../Loader/Loader";
 // import { useLoader } from "@/store/loaderStore";
 
 const LoginComponent = () => {
   const [type, setType] = useState(false);
   //   const setLoading = useLoader((state) => state.setLoading);
-  //   const getUserDetails = userDetailsStore((state) => state.getUserDetails);
+  const getUserDetails = userDetailsStore((state) => state.getUserDetails);
 
   const {
     register,
@@ -29,32 +29,26 @@ const LoginComponent = () => {
 
   const submitData = async (data) => {
     try {
-      setLoading(true);
-      const response = await axios.post({
-        url: loginApi,
-        body: data,
-      });
-      // const response = await axios.post(`${ApiUrl}${loginApi}`, data);
+      // setLoading(true);
+      const response = await axios.post(
+        "http://localhost:3002/api/login",
+        data
+      );
       if (response?.data?.status) {
         setCookie("token", response?.data?.data?.token);
         reset();
         toast.success("Login Successful!");
         getUserDetails();
-        if (response?.data?.data?.org_joined) {
-          setCookie("org", response?.data?.data?.org_joined);
-          router.push("/home");
-        } else {
-          router.push("/create-join");
-        }
-        setLoading(false);
+        router.push("/feed");
+        // setLoading(false);
       } else {
         toast.error(response?.data?.message);
-        setLoading(false);
+        // setLoading(false);
       }
     } catch (error) {
       console.log(error);
       toast.error(error.message);
-      setLoading(false);
+      // setLoading(false);
     }
   };
 
@@ -126,7 +120,7 @@ const LoginComponent = () => {
           )}
         </div>
         {/* <button type="submit" className="bg-">Login</button> */}
-        <PrimaryBtn onClick={handleSubmit} label="Login" />
+        <PrimaryBtn type="submit" label="Login" />
       </form>
     </motion.div>
   );
