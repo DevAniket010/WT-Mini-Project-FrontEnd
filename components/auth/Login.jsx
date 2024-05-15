@@ -56,7 +56,7 @@ const LoginComponent = () => {
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-[40%] lg:mx-0 mx-2 lg:px-10 px-4 py-8 pb-12 bg-white rounded-xl shadow-xl"
+      className="w-[35%] lg:mx-0 mx-2 lg:px-10 px-4 py-10 pb-12 bg-white rounded-xl shadow-xl"
     >
       <div className="flex justify-center flex-col items-center">
         <p className="text-2xl font-semibold">

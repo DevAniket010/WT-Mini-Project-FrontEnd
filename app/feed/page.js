@@ -1,12 +1,12 @@
-import LoginComponent from "@/components/auth/Login";
+import Polls from "@/components/poll/Polls";
 import React from "react";
 import { isLoggedIn } from "../../lib/isLoggedIn";
 
 const Login = () => {
   isLoggedIn();
   return (
-    <div className="w-screen bg-gray-900 h-screen flex justify-center items-center">
-      <LoginComponent />
+    <div className="flex justify-center">
+      <Polls />
     </div>
   );
 };
