@@ -1,12 +1,13 @@
-import Polls from "@/components/poll/Polls";
+// import Polls from "@/components/poll/Polls";
 import React from "react";
 import { isLoggedIn } from "../../lib/isLoggedIn";
 
 const Login = () => {
-  isLoggedIn();
+  // isLoggedIn();
   return (
     <div className="flex justify-center">
-      <Polls />
+      {/* <Polls /> */}
+      <p>Hehiukhni</p>
     </div>
   );
 };
