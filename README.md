@@ -1,4 +1,4 @@
-**Anonymous Opinion Manager Platform**
+ **Anonymous Opinion Manager Platform**
 
 An innovative platform that allows users to participate in polls and vote anonymously, providing valuable insights into various topics, including business decisions. The platform also enables admins and users, such as company management or entrepreneurs, to create polls to gather opinions from their audience in a secure and anonymous manner.
 
@@ -53,8 +53,7 @@ cd ../frontend
 npm start
 
 **Project Glimpse**
-![Banner](https://drive.google.com/file/d/1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls/view)
-
+![Banner](https://drive.google.com/uc?export=view&id=1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls)
 <img src="https://drive.google.com/file/d/1xipuAZokA01lU3fjFQRcDhdxQxh7ply-/view?usp=sharing" alt="Banner" style="width: 100%; height: auto;">
 
 <img src="https://media.licdn.com/dms/image/v2/D4D16AQFqNpIgtNxatQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1724158605696?e=1733356800&v=beta&t=3YH-aju92N5J1ojIDxwCdLiiqzYY94DPb78eK2j_YhY" alt="Banner" style="width: 100%; height: auto;">
