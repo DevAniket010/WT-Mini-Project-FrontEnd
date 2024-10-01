@@ -16,19 +16,19 @@ User Feedback: Poll creators can gather feedback from a wide range of users with
 
 This platform is built using the MERN stack, which includes the following technologies:
 
-MongoDB: A NoSQL database used for storing user data, poll information, and voting results.
-Express.js: A web application framework for building the backend and handling requests.
-React.js: A JavaScript library for building the frontend user interface, ensuring a smooth user experience.
-Node.js: A JavaScript runtime for building the server-side of the application.
+MongoDB: A NoSQL database used for storing user data, poll information, and voting results.<br/>
+Express.js: A web application framework for building the backend and handling requests.<br/>
+React.js: A JavaScript library for building the frontend user interface, ensuring a smooth user experience.<br/>
+Node.js: A JavaScript runtime for building the server-side of the application.<br/>
 
 
 **Future Aspects**
 
-Enhanced Analytics: Incorporating detailed analytics for poll creators, such as vote trends, geographical distribution, or user demographics (while maintaining anonymity).
-Custom Polls: Allowing users to create custom polls with advanced options like multiple-choice questions, ratings, and comment sections.
-Integration with Social Media: Enabling users to share poll results or vote links on social media platforms to increase participation.
-Real-time Voting Updates: Displaying real-time voting updates as more users participate in the polls.
-AI Insights: Implementing AI-driven insights to analyze the poll results and provide actionable recommendations based on the data.
+Enhanced Analytics: Incorporating detailed analytics for poll creators, such as vote trends, geographical distribution, or user demographics (while maintaining anonymity).<br/>
+Custom Polls: Allowing users to create custom polls with advanced options like multiple-choice questions, ratings, and comment sections.<br/>
+Integration with Social Media: Enabling users to share poll results or vote links on social media platforms to increase participation.<br/>
+Real-time Voting Updates: Displaying real-time voting updates as more users participate in the polls.<br/>
+AI Insights: Implementing AI-driven insights to analyze the poll results and provide actionable recommendations based on the data.<br/>
 
 
 **How to Run Locally**
