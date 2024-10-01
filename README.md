@@ -55,7 +55,7 @@ npm start
 **Project Glimpse**
 ![Banner](https://drive.google.com/uc?export=view&id=1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls)
 
-![Banner](https://drive.google.com/uc?export=view&id=1xipuAZokA01lU3fjFQRcDhdxQxh7ply)
+![Banner](https://drive.google.com/uc?export=view&id=1xipuAZokA01lU3fjFQRcDhdxQxh7ply-)
 
 ![Banner](https://drive.google.com/uc?export=view&id=1YYVf-2Wa-ZSWD8-Jo-WXiCfChCySbZGI)
 
