@@ -53,7 +53,7 @@ cd ../frontend
 npm start
 
 **Project Glimpse**
-<img src="https://drive.google.com/file/d/1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls/view?usp=sharing" alt="Banner" style="width: 100%; height: auto;">
+![Banner](https://drive.google.com/file/d/1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls/view)
 
 <img src="https://drive.google.com/file/d/1xipuAZokA01lU3fjFQRcDhdxQxh7ply-/view?usp=sharing" alt="Banner" style="width: 100%; height: auto;">
 
