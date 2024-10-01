@@ -54,12 +54,12 @@ npm start
 
 **Project Glimpse**
 ![Banner](https://drive.google.com/uc?export=view&id=1fmnzFrYDJZIqptm6T28yH2n2f_7IbRls)
-<img src="https://drive.google.com/file/d/1xipuAZokA01lU3fjFQRcDhdxQxh7ply-/view?usp=sharing" alt="Banner" style="width: 100%; height: auto;">
 
-<img src="https://media.licdn.com/dms/image/v2/D4D16AQFqNpIgtNxatQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1724158605696?e=1733356800&v=beta&t=3YH-aju92N5J1ojIDxwCdLiiqzYY94DPb78eK2j_YhY" alt="Banner" style="width: 100%; height: auto;">
+![Banner](https://drive.google.com/uc?export=view&id=1xipuAZokA01lU3fjFQRcDhdxQxh7ply)
 
-<img src="https://media.licdn.com/dms/image/v2/D4D16AQFqNpIgtNxatQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1724158605696?e=1733356800&v=beta&t=3YH-aju92N5J1ojIDxwCdLiiqzYY94DPb78eK2j_YhY" alt="Banner" style="width: 100%; height: auto;">
+![Banner](https://drive.google.com/uc?export=view&id=1YYVf-2Wa-ZSWD8-Jo-WXiCfChCySbZGI)
 
-<img src="https://media.licdn.com/dms/image/v2/D4D16AQFqNpIgtNxatQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1724158605696?e=1733356800&v=beta&t=3YH-aju92N5J1ojIDxwCdLiiqzYY94DPb78eK2j_YhY" alt="Banner" style="width: 100%; height: auto;">
+![Banner](https://drive.google.com/uc?export=view&id=17SkPWXa8La5zoQNbIlEOLAdArWtEFb8d)
 
-<img src="https://media.licdn.com/dms/image/v2/D4D16AQFqNpIgtNxatQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1724158605696?e=1733356800&v=beta&t=3YH-aju92N5J1ojIDxwCdLiiqzYY94DPb78eK2j_YhY" alt="Banner" style="width: 100%; height: auto;">
+![Banner](https://drive.google.com/uc?export=view&id=1DtwCPyUItyZkVFlUOKgjOwBAl5FnEv7I)
+
