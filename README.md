@@ -35,7 +35,7 @@ AI Insights: Implementing AI-driven insights to analyze the poll results and pro
 
 Clone the repository:
 
-git clone https://github.com/yourusername/anonymous-opinion-manager.git
+git clone https://github.com/DevAniket010/WT-Mini-Project-FrontEnd
 
 Install dependencies for both the backend and frontend:
 
